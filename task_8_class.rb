@@ -32,8 +32,7 @@ class Array
 
   def average
     return 0 if @array.is_a? String
-    average_value = 0
-    sum = 0
+    average_value = sum = 0
     @array.each { |num| sum += num }
     average_value = (sum.to_f / @array.length)
     puts "Cреднее арифметическое значение элементов массива: #{average_value}"
@@ -41,8 +40,7 @@ class Array
 
   def even_odd
     return 0 if @array.is_a? String
-    even = 0
-    odd = 0
+    even = odd = 0
     @array.each do |num|
       if num % 2 == 0
         even += 1
