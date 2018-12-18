@@ -41,12 +41,9 @@ class Array
   def even_odd
     return 0 if @array.is_a? String
     even = odd = 0
-    @array.each do |num|
-      if num % 2 == 0
-        even += 1
-      elsif num % 2 != 0
-        odd += 1
-      end
+    @array.each do |num|        
+      even += 1 if num.even?
+      odd += 1 if num.odd?
     end
     if even > odd
       diff = even - odd
