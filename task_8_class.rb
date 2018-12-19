@@ -29,9 +29,10 @@ class Array
 
   def average
     return 0 if @array.is_a? String
-    average_value = sum = 0
-    @array.each { |num| sum += num }
-    average_value = (sum.to_f / @array.length)
+   # average_value = sum = 0
+   # @array.each { |num| sum += num }
+   # average_value = (sum.to_f / @array.length)
+    average_value = @array.reduce(:+) / @array.size         #rewritten
     puts "Cреднее арифметическое значение элементов массива: #{average_value}"
   end
 
