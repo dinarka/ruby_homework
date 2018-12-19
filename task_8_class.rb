@@ -23,10 +23,7 @@ class Array
 
   def square
     return 0 if @array.is_a? String
-    squared_array = []
-    @array.map do |num| square = num * num
-      squared_array << square
-    end
+    squared_array =  @array.map { |num| square = num ** 2 }
     puts "Новый массив чисел, возведенных в квадрат: #{squared_array}"
   end
 
@@ -53,8 +50,7 @@ class Array
   end
 
   def reverse_strings
-    reversed = []
-    @array.map { |string| reversed << string.reverse }
+    reversed = @array.map { |string| string.reverse }
     puts "Массив с перевернутыми строками: #{reversed}"
   end
 end
